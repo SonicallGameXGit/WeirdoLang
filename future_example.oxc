@@ -1,0 +1,36 @@
+struct Vec2 {
+    var x: f32 = 0.0
+    var y: f32 = 0.0
+}
+struct Vec3 {
+    var x: f32 = 0.0
+    var y: f32 = 0.0
+    var z: f32 = 0.0
+
+    new() {}
+    new(x: f32, y: f32) {
+        this.x = x
+        this.y = y
+    }
+    del() {}
+
+    fn xy(): Vec2 {
+        return {
+            x = this.x,
+            y = this.y
+        }
+    }
+}
+
+fn main(): void {
+    var vsd: Vec2 = { x = 3.0, y = 6.0 }
+    var vec: Vec3 = { x = 0.0, y = 0.0, z = 3.0 }
+
+    var xy: Vec2 = vec.xy()
+
+    var ptr: ref Vec2 = ref vsd;
+    var s = deref vsd.x;
+
+    var mutable: mut Vec2 = { x = 6.0, y = 0.3 }
+    const constant: Vec2 = { x = 3.0, y = 0.6 }
+}

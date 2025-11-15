@@ -1,0 +1,11 @@
+fn test(): void {
+    var dolboeb: int32;
+    var dolboeb2: int32;
+}
+
+fn main(): void {
+    var dolboeb: int32;
+    var myVar2: int32;
+    var myVar3: int32;
+    test();
+}
